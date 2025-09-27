@@ -59,8 +59,8 @@
 1. Clone the repository
 
    ```bash
-   git clone <repo-link>
-   cd design-patterns-exercise
+   git clone https://github.com/shyam-210/EI_Study.git
+   cd EI_Study/exercise1
    ```
 
 2. Compile the code (Java example)
