@@ -19,6 +19,10 @@ public class BookingSystem {
 
     public void bookRoom(int roomId, LocalDateTime startTime, int durationMinutes) {
         Room room = OfficeConfig.getInstance().getRoom(roomId);
+        if (room == null) {
+            System.out.println("Room " + roomId + " does not exist.");
+            return;
+        }
 
         if (room.getBooking().isPresent() && room.getBooking().get().isActive()) {
             System.out.println("Room " + roomId + " is already booked during this time. Cannot book.");

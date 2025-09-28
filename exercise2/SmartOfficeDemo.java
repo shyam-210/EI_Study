@@ -29,7 +29,7 @@ public class SmartOfficeDemo {
         commands.put("block", new BookRoomCommand());
         commands.put("cancel", new CancelRoomCommand());
         commands.put("add", new AddOccupantCommand(sensor));
-        commands.put("status", new RoomStatusCommand());
+        commands.put("room", new RoomStatusCommand());
 
         System.out.println("Smart Office Facility Demo. Type 'help' for commands.");
 
@@ -45,7 +45,7 @@ public class SmartOfficeDemo {
                 System.out.println("  block <roomId> <HH:mm> <durationMinutes>");
                 System.out.println("  cancel <roomId>");
                 System.out.println("  add occupant <roomId> <count>");
-                System.out.println("  status <roomId>");
+                System.out.println("  room status <roomId>");
                 System.out.println("  exit");
             } else if (!input.isEmpty() && !"exit".equalsIgnoreCase(input)) {
                 String[] parts = input.split(" ");
